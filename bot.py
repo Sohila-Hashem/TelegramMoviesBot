@@ -98,7 +98,7 @@ def get_movies(category_id: int, page) -> list:
         "page": page,
         "with_genres": category_id,
         "vote_average.gte": 6,
-        "release_date.gte":"2000-01-01"
+        "release_date.gte":"2010-01-01"
     }
 
     headers = {
