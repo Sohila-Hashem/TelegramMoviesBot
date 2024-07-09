@@ -16,7 +16,7 @@ async def display_response(movie: dict, update: Update) -> None:
 async def display_after_response_menu(trailer: list | None, update: Update):
     if trailer != None:
         sub_menu = [
-            [KeyboardButton("Watch Trailer", web_app=WebAppInfo(f"https://www.youtube.com/watch?v={trailer[0]["key"]}"))],
+            [KeyboardButton("Watch Trailer", web_app=WebAppInfo(f"""https://www.youtube.com/watch?v={trailer[0]["key"]}"""))],
             ["/menu"],
         ]
     else:
