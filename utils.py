@@ -8,10 +8,10 @@ movies_api_key = os.getenv("MOVIES_API_KEY")
 # utils
 async def display_response(movie: dict, update: Update) -> None:
     await update.message.reply_html(f"""How about <b>'{movie["title"]}'?</b>""")
-    await update.message.reply_html(f"<b>Description</b>:\n{movie["overview"]}")
-    await update.message.reply_html(f"<b>Rating: {movie["vote_average"]}</b>")
-    await update.message.reply_html(f"<b>Release Date: {movie["release_date"]}</b>")
-    await update.message.reply_html(f"<b>Original Language: {movie["original_language"]}</b>")
+    await update.message.reply_html(f"""<b>Description</b>:\n{movie["overview"]}""")
+    await update.message.reply_html(f"""<b>Rating: {movie["vote_average"]}</b>""")
+    await update.message.reply_html(f"""<b>Release Date: {movie["release_date"]}</b>""")
+    await update.message.reply_html(f"""<b>Original Language: {movie["original_language"]}</b>""")
 
 async def display_after_response_menu(trailer: list | None, update: Update):
     if trailer != None:
